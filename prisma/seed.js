@@ -54,6 +54,40 @@ const prisma = new PrismaClient();
         });
 
         console.log("Create 4 explorers");
+
+        const node = await prisma.mission.upsert({
+            where : { name: "Node"},
+            update: {},
+            create: {
+                name: "Node",
+                lang: "javascript",
+                missionCommander: "Carlo",
+                enrollments: 20
+            }
+        });
+        
+        const java = await prisma.mission.upsert({
+            where : { name: "Java"},
+            update: {},
+            create: {
+                name: "Java",
+                lang: "Java",
+                missionCommander: "Fernanda",
+                enrollments: 15
+            }
+        });
+        
+        const python = await prisma.mission.upsert({
+            where : { name: "Python"},
+            update: {},
+            create: {
+                name: "Python",
+                lang: "Python",
+                missionCommander: "Washi",
+                enrollments: 10
+            }
+        });
+        console.log("Se han credo 3 misiones");
     } catch(e) {
         console.error(e);
         process.exit(1);
