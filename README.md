@@ -8,12 +8,17 @@ La base de datos es sql construida en POSTGRESQL.
 ### Setup
 Para instalar las dependencias necesarias.
 
-`npm install`
+```
+npm install
+```
 
 Para correr el servidor.
 
-`node lib/server.js`
-
+```
+node lib/server.js
+```
 y acceder a la url.
 
-`localhost:3000`
+```
+localhost:3000
+```
